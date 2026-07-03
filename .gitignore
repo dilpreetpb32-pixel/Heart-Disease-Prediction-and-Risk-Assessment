@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# VS Code Settings (optional)
+.vscode/
+
+# Environment Variables
+.env
+
+# Model Files (optional - remove if you want to upload trained models)
+# models/
+
+# Logs
+*.log
