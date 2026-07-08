@@ -22,8 +22,12 @@ st.set_page_config(
 # Load Model and Scaler
 # ----------------------------------------------------------
 
-model = joblib.load("models/heart_disease_model.pkl")
-scaler = joblib.load("models/scaler.pkl")
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+model = joblib.load(BASE_DIR / "models" / "optimized_xgboost.pkl")
+scaler = joblib.load(BASE_DIR / "models" / "scaler.pkl")
 
 # ----------------------------------------------------------
 # Application Title
