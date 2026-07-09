@@ -19,7 +19,8 @@ Thumbs.db
 .env
 
 # Model Files (optional - remove if you want to upload trained models)
-# models/
-
+*.pkl
+!models/optimized_xgboost.pkl
+!models/scaler.pkl
 # Logs
 *.log
