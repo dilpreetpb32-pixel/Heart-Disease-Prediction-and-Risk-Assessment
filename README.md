@@ -1,4 +1,20 @@
-# ❤️ Heart Disease Prediction & Risk Assessment Using Machine Learning
+<p align="center">
+  <img src="images/banner.png" alt="Heart Disease Prediction Banner" width="100%">
+</p>
+
+# ❤️ Heart Disease Prediction & Risk Assessment Using Machine Learning On Clinical Health Data
+
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red?logo=streamlit)
+
+![XGBoost](https://img.shields.io/badge/XGBoost-Best%20Model-success)
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
+
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ## 📌 Project Overview
 
@@ -133,25 +149,21 @@ streamlit run app.py
 ---
 
 ## 🌐 Live Demo
-
-Add your deployed Streamlit application link here.
-
 ```
-https://your-streamlit-app-url.streamlit.app
+https://dilpreetpb32-pixel-heart-disease-prediction-and-risk-app-oo13tq.streamlit.app/
 ```
 
 ---
 
-## 📷 Screenshots
+## 🔮 Future Improvements
 
-You can add screenshots of:
-
-- Home Page
-- Prediction Result
-- Risk Score
-- Risk Category
-
----
+- SHAP Explainability
+- PDF Report Generation
+- User Authentication
+- Doctor Dashboard
+- Database Integration
+- REST API using FastAPI
+- Docker Deployment
 
 ## 👩‍💻 Author
 
