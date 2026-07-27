@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap');
+
+:root {
+  --ink: #0B2545;
+  --ink-soft: #5B6B7C;
+  --canvas: #F3F6F8;
+  --surface: #FFFFFF;
+  --primary: #0F5257;
+  --primary-tint: #E4F1F0;
+  --border: #E3E8EF;
+  --green: #1E8A5F;
+  --green-tint: #E7F5EE;
+  --amber: #B9791A;
+  --amber-tint: #FBF1DD;
+  --red: #C0392B;
+  --red-tint: #FBE9E7;
+}
+
+/* ---------- Base ---------- */
+html, body, [class^="css"], [class*=" css"] {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+h1, h2, h3, h4, .display-font {
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+[data-testid="stAppViewContainer"] { background: var(--canvas); }
+.block-container { padding-top: 1.5rem; padding-bottom: 3rem; max-width: 1200px; }
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header[data-testid="stHeader"] { background: transparent; }
+
+/* Monospace treatment for all data readouts -- gives numeric values a
+   lab-instrument feel that ties back to the clinical subject matter. */
+.mono, .metric-value, .gauge-readout, .kpi-value, .badge, code {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace !important;
+}
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+  background: var(--primary-tint);
+  border-right: 1px solid var(--border);
+}
+[data-testid="stSidebar"] .block-container { padding-top: 1.25rem; }
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+  color: var(--ink);
+}
+[data-testid="stSidebar"] [data-testid="stExpander"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+}
+.sidebar-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  text-transform: uppercase;
+  margin-bottom: 0.1rem;
+}
+.sidebar-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.15rem;
+}
+.sidebar-caption {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Masthead ---------- */
+.masthead {
+  background: linear-gradient(135deg, #0B2545 0%, #0F5257 100%);
+  border-radius: 14px;
+  padding: 1.9rem 2.2rem;
+  margin-bottom: 1.4rem;
+  color: #F3F6F8;
+}
+.masthead-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8FD4C8;
+  margin-bottom: 0.5rem;
+}
+.masthead-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.15;
+}
+.masthead-subtitle {
+  font-size: 0.98rem;
+  color: #C8D6DD;
+  max-width: 640px;
+  margin-bottom: 1.1rem;
+}
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.trust-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  background: rgba(255,255,255,0.09);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #E9F2F1;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(11, 37, 69, 0.04);
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+}
+.card-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+/* ---------- Badges / pills ---------- */
+.badge {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  margin: 0.1rem 0.25rem 0.1rem 0;
+}
+.badge-ok { background: var(--green-tint); color: var(--green); }
+.badge-warn { background: var(--amber-tint); color: var(--amber); }
+.badge-danger { background: var(--red-tint); color: var(--red); }
+.badge-info { background: var(--primary-tint); color: var(--primary); }
+
+/* ---------- Risk verdict banner ---------- */
+.verdict-banner {
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.verdict-icon { font-size: 1.8rem; line-height: 1; }
+.verdict-text { font-size: 1.02rem; font-weight: 600; color: var(--ink); }
+.verdict-sub { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.1rem; }
+
+/* ---------- Gauge ---------- */
+.gauge-card { text-align: center; }
+.gauge-svg { width: 100%; max-width: 320px; height: auto; }
+.gauge-tick-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  fill: var(--ink-soft);
+}
+.gauge-readout {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-top: -1.4rem;
+}
+.gauge-readout-label {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- KPI grid (Model Performance tab) ---------- */
+.kpi-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+.kpi-value { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+.kpi-label {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.15rem;
+}
+
+/* ---------- Empty state ---------- */
+.empty-state {
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 2.6rem 1.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  background: var(--surface);
+}
+.empty-state-icon { font-size: 2.2rem; margin-bottom: 0.6rem; }
+
+/* ---------- Streamlit element polish ---------- */
+[data-testid="stMetric"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+}
+[data-testid="stMetricValue"] { font-family: 'IBM Plex Mono', monospace; color: var(--ink); }
+[data-testid="stMetricLabel"] { color: var(--ink-soft); }
+
+.stButton > button {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.stTabs [data-baseweb="tab-list"] { gap: 0.4rem; border-bottom: 1px solid var(--border); }
+.stTabs [data-baseweb="tab"] {
+  height: 2.6rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+.stTabs [aria-selected="true"] { color: var(--primary) !important; }
+
+[data-testid="stExpander"] { border-radius: 10px; border: 1px solid var(--border); }
+
+hr { border-color: var(--border); }
+
+.footer-note {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  padding-top: 1rem;
+}
+.footer-note b { color: var(--ink); }
